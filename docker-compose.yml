@@ -1,7 +1,7 @@
 services:
 
   web:
-    build: .
+    image: fahim017803/mdfahim.dev:latest
     ports:
       - "80:80"
       
