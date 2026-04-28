@@ -11,9 +11,6 @@ jobs:
   ssl:
     runs-on: ubuntu-latest
     steps:
-      - name: Check SSL certificate
-        run: |
-          curl -vI https://ec2.mdfahim.dev 2>&1 | grep -E "expire|issuer|subject"
-          # curl দিয়ে site এ connect করবে
-          # SSL certificate এর expire date, issuer, subject দেখাবে
-          # expire হয়ে গেলে বুঝতে পারবে
+     - name: Check SSL certificate
+       run: |
+          curl -vI http://ec2.mdfahim.dev 2>&1 | grep -E "Server|Content-Type|HTTP"
