@@ -1,0 +1,23 @@
+name: OWASP ZAP Scan
+
+on:
+  workflow_run:
+    workflows: ["Deploy Portfolio"]
+    # deploy শেষ হলে তারপর run হবে — site live থাকলেই scan করা যাবে
+    types:
+      - completed
+
+jobs:
+  zap-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ZAP Scan
+        uses: zaproxy/action-baseline@v0.12.0
+        # OWASP ZAP tool দিয়ে live site scan করবে
+        # SQL injection, XSS, insecure headers ইত্যাদি check করবে
+        with:
+          target: 'http://18.183.212.236'
+          # এই IP তে scan করবে
+          fail_action: false
+          # vulnerability পেলেও pipeline fail করবে না
+          # শুধু report দেখাবে
