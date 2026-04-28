@@ -29,6 +29,6 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-         tags: |
+          tags: |
             fahim017803/mdfahim.dev:latest
             fahim017803/mdfahim.dev:${{ github.sha }}
