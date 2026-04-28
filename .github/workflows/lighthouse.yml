@@ -17,7 +17,7 @@ jobs:
         # Google Lighthouse দিয়ে site check করবে
         with:
           urls: |
-            http://3.113.10.161
+            http://18.183.212.236
             # এই URL check করবে
           uploadArtifacts: true
           # result file হিসেবে save করবে — Actions এ download করা যাবে
