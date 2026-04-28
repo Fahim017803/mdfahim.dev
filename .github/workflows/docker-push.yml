@@ -1,19 +1,29 @@
 name: docker build and push
+
 on:
-  push:
-    branches: [main]
+  workflow_run:
+    workflows: ["Secret Scan", "Code Quality", "Docker Lint", "Dependency Scan"]
+    # এই ৪টা workflow শেষ হলে তারপর run হবে
+    types:
+      - completed
+
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    # শুধুমাত্র আগের workflow success হলে run হবে
+    # fail হলে এখানেই pipeline বন্ধ — Docker Hub এ push হবে না
+
     steps:
-      - name: checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
       - name: login to docker
         uses: docker/login-action@v3
         with:
           username: ${{ vars.DOCKERHUB_USER }}
+          # GitHub variable থেকে username নেবে = fahim017803
           password: ${{ secrets.DOCKERHUB_TOKEN }}
+          # GitHub secret থেকে token নেবে
 
       - name: build and push
         uses: docker/build-push-action@v6
@@ -22,3 +32,6 @@ jobs:
           tags: |
             fahim017803/mdfahim.dev:latest
             fahim017803/mdfahim.dev:${{ github.sha }}
+            # দুইটা tag দিয়ে push করবে
+            # latest — সবসময় নতুনটা
+            # github.sha — কোন commit এর build সেটা track করা যাবে

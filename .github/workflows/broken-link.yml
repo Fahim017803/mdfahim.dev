@@ -1,0 +1,23 @@
+name: Broken Link Check
+
+on:
+  schedule:
+    - cron: '0 9 * * 1'
+    # প্রতি সোমবার সকাল ৯টায় run হবে
+  workflow_dispatch:
+
+jobs:
+  link-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check broken links
+        uses: lycheeverse/lychee-action@v1
+        # lychee tool দিয়ে check করবে
+        with:
+          args: --verbose --no-progress index.html
+          # index.html এর সব link check করবে
+          # কোনো link dead/404 হলে report দেবে
+          fail: false
+          # broken link পেলেও pipeline fail করবে না

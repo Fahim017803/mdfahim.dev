@@ -1,15 +1,18 @@
 name: Deploy Portfolio
+
 on:
   workflow_run:
     workflows: ["docker build and push"]
+    # docker push শেষ হলে তারপর run হবে
     types:
       - completed
+
 jobs:
   deploy:
     runs-on: self-hosted
+    # তোমার EC2 এ run হবে — GitHub এর server এ না
     steps:
-      - name: checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
       - name: login to docker
         uses: docker/login-action@v3
@@ -20,5 +23,8 @@ jobs:
       - name: deploy with docker compose
         run: |
           docker compose down
+          # আগের container বন্ধ করবে
           docker compose pull
+          # Docker Hub থেকে নতুন image নামাবে
           docker compose up -d
+          # নতুন container চালু করবে background এ

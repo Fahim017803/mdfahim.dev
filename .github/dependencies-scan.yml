@@ -1,0 +1,23 @@
+name: Dependency Scan
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run Trivy scan
+        uses: aquasecurity/trivy-action@master
+        # Trivy tool দিয়ে scan করবে
+        with:
+          image-ref: fahim017803/mdfahim.dev:latest
+          # Docker Hub এ যে image আছে সেটা scan করবে
+          format: table
+          # result table format এ দেখাবে
+          exit-code: 0
+          # vulnerability পেলেও pipeline fail করবে না (0 মানে always pass)
+          # 1 দিলে fail করত

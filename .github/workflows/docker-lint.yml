@@ -1,0 +1,20 @@
+name: Docker Lint
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Lint Dockerfile
+        uses: hadolint/hadolint-action@v3.1.0
+        # Hadolint tool দিয়ে Dockerfile check করবে
+        with:
+          dockerfile: dockerfile
+          # তোমার dockerfile এর নাম — lowercase তাই এভাবে লিখেছি
+          # best practices follow হচ্ছে কিনা দেখবে
+          # যেমন: latest tag use করা, root user use করা ইত্যাদি
