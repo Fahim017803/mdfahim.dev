@@ -13,5 +13,5 @@ jobs:
         uses: treosh/lighthouse-ci-action@v11
         with:
           urls: |
-            http://18.183.212.236
+            https://ec2.mdfahim.dev
           uploadArtifacts: true
