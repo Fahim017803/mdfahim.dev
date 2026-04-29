@@ -1,0 +1,19 @@
+name: Deploy Production
+on:
+  workflow_dispatch:
+jobs:
+  deploy:
+    runs-on: [self-hosted, Linux, X64, ip-172-31-33-243]
+    environment: production
+    steps:
+      - uses: actions/checkout@v4
+      - name: login to docker
+        uses: docker/login-action@v3
+        with:
+          username: ${{ vars.DOCKERHUB_USER }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: deploy with docker compose
+        run: |
+          docker compose down
+          docker compose pull
+          docker compose up -d
