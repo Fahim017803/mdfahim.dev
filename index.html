@@ -3,7 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Md Mainul Islam Fahim — DevOps-focused IT student in Sydney. Skilled in Linux, Docker, CI/CD, GitHub Actions, and automation.">
+<meta name="theme-color" content="#0b0f16">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="DENY">
 <title>Fahim — DevOps Engineer</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚙️</text></svg>">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
@@ -26,14 +31,10 @@ body{background:var(--bg);color:var(--text);font-family:'JetBrains Mono',monospa
 #cur{position:fixed;width:8px;height:8px;background:var(--accent);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .15s,height .15s}
 #cur-ring{position:fixed;width:34px;height:34px;border:1.5px solid var(--accent);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:all .1s ease;opacity:.45}
 
-/* subtle grid */
 .grid-bg{position:fixed;inset:0;background-image:linear-gradient(rgba(0,212,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,255,.018) 1px,transparent 1px);background-size:72px 72px;z-index:0;pointer-events:none}
-
-/* glow orbs for depth */
 .orb1{position:fixed;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(0,212,255,.06) 0%,transparent 70%);top:-100px;right:-100px;pointer-events:none;z-index:0}
 .orb2{position:fixed;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(74,222,128,.04) 0%,transparent 70%);bottom:100px;left:-100px;pointer-events:none;z-index:0}
 
-/* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:1.1rem 4.5rem;background:rgba(11,15,22,.92);backdrop-filter:blur(24px);border-bottom:1px solid var(--border)}
 .nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1rem;color:var(--white)}
 .nav-logo span{color:var(--accent)}
@@ -46,17 +47,16 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content
 
 section{position:relative;z-index:1}
 
-/* HERO */
 #hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:7rem 4.5rem 4rem;gap:4rem}
-.hero-badge{display:inline-flex;align-items:center;gap:.6rem;font-size:.63rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);background:rgba(0,212,255,.08);border:1px solid rgba(0,212,255,.2);padding:.4rem 1rem;border-radius:2px;margin-bottom:1.8rem;opacity:0;animation:fadeUp .6s .1s forwards}
+.hero-badge{display:inline-flex;align-items:center;gap:.6rem;font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);background:rgba(0,212,255,.08);border:1px solid rgba(0,212,255,.2);padding:.4rem 1rem;border-radius:2px;margin-bottom:1.8rem;opacity:0;animation:fadeUp .6s .1s forwards}
 .hero-name{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(3rem,6vw,5.5rem);line-height:.9;color:var(--white);letter-spacing:-.04em;opacity:0;animation:fadeUp .7s .25s forwards}
 .hero-name .line2{color:var(--accent);display:block;margin-top:.1em}
-.hero-sub{margin-top:1.6rem;font-size:.82rem;color:var(--text);letter-spacing:.01em;line-height:1.85;opacity:0;animation:fadeUp .7s .4s forwards}
+.hero-sub{margin-top:1.6rem;font-size:.9rem;color:var(--text);letter-spacing:.01em;line-height:1.85;opacity:0;animation:fadeUp .7s .4s forwards}
 .hero-sub strong{color:var(--white)}
-.hero-loc{margin-top:1rem;font-size:.7rem;color:var(--muted);opacity:0;animation:fadeUp .6s .5s forwards;display:flex;align-items:center;gap:.6rem}
+.hero-loc{margin-top:1rem;font-size:.8rem;color:var(--muted);opacity:0;animation:fadeUp .6s .5s forwards;display:flex;align-items:center;gap:.6rem}
 .hero-loc span{color:var(--accent2);font-weight:500}
 .hero-cta{display:flex;gap:.9rem;margin-top:2.4rem;opacity:0;animation:fadeUp .7s .65s forwards;flex-wrap:wrap}
-.btn{padding:.7rem 1.8rem;font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border:1.5px solid var(--accent);color:var(--accent);background:transparent;cursor:none;transition:all .22s;position:relative;overflow:hidden;display:inline-block}
+.btn{padding:.7rem 1.8rem;font-family:'JetBrains Mono',monospace;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border:1.5px solid var(--accent);color:var(--accent);background:transparent;cursor:none;transition:all .22s;position:relative;overflow:hidden;display:inline-block}
 .btn::before{content:'';position:absolute;inset:0;background:var(--accent);transform:translateX(-101%);transition:transform .28s ease}
 .btn:hover::before{transform:translateX(0)}
 .btn:hover{color:var(--bg)}
@@ -65,13 +65,12 @@ section{position:relative;z-index:1}
 .btn-g::before{background:var(--accent2)}
 .btn-g:hover{color:var(--bg)}
 
-/* TERMINAL */
 .terminal{background:var(--surface);border:1px solid var(--border);border-radius:8px;overflow:hidden;opacity:0;animation:fadeLeft .8s .8s forwards;box-shadow:0 24px 80px rgba(0,0,0,.5)}
 .term-bar{display:flex;align-items:center;gap:.5rem;padding:.7rem 1.1rem;background:#0d1520;border-bottom:1px solid var(--border)}
 .td{width:11px;height:11px;border-radius:50%}
 .td1{background:#ff5f57}.td2{background:#ffbd2e}.td3{background:#28c840}
-.term-title{font-size:.62rem;color:var(--muted);margin-left:.5rem}
-.term-body{padding:1.3rem 1.5rem;font-size:.7rem;line-height:2.15}
+.term-title{font-size:.75rem;color:var(--muted);margin-left:.5rem}
+.term-body{padding:1.3rem 1.5rem;font-size:.8rem;line-height:2.15}
 .tl{display:flex;gap:.5rem}
 .tp{color:var(--accent2)}
 .tc{color:var(--white)}
@@ -82,27 +81,24 @@ section{position:relative;z-index:1}
 .tb{display:inline-block;width:8px;height:14px;background:var(--accent);animation:cur 1s infinite;vertical-align:text-bottom}
 @keyframes cur{0%,100%{opacity:1}50%{opacity:0}}
 
-/* SECTION LABEL */
-.sec-label{font-size:.63rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:3rem;display:flex;align-items:center;gap:1rem;font-weight:500}
+.sec-label{font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:3rem;display:flex;align-items:center;gap:1rem;font-weight:500}
 .sec-label::after{content:'';height:1px;background:var(--border);width:70px}
 
-/* ABOUT */
 #about{padding:6rem 4.5rem;border-top:1px solid var(--border)}
 .about-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:5rem;align-items:start}
 .about-text h2{font-family:'Syne',sans-serif;font-weight:800;font-size:2.3rem;color:var(--white);line-height:1.1;letter-spacing:-.03em;margin-bottom:1.5rem}
 .about-text h2 em{color:var(--accent);font-style:normal}
-.about-text p{font-size:.78rem;line-height:2;color:var(--text);margin-bottom:1rem}
+.about-text p{font-size:.85rem;line-height:2;color:var(--text);margin-bottom:1rem}
 .about-text p strong{color:var(--white)}
 .focus-list{list-style:none;margin-top:1.2rem}
-.focus-list li{font-size:.73rem;color:var(--text);padding:.5rem 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.75rem;line-height:1.6}
-.focus-list li::before{content:'▸';color:var(--accent);font-size:.6rem;flex-shrink:0}
+.focus-list li{font-size:.82rem;color:var(--text);padding:.5rem 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.75rem;line-height:1.6}
+.focus-list li::before{content:'▸';color:var(--accent);font-size:.7rem;flex-shrink:0}
 .about-stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border)}
 .stat{background:var(--surface);padding:1.8rem;text-align:center;transition:background .2s}
 .stat:hover{background:var(--surface2)}
 .stat-num{font-family:'Syne',sans-serif;font-weight:800;font-size:2.3rem;color:var(--accent);display:block;line-height:1}
-.stat-label{font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:.45rem;display:block}
+.stat-label{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:.45rem;display:block}
 
-/* SKILLS */
 #skills{padding:6rem 4.5rem;border-top:1px solid var(--border)}
 .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-top:2rem}
 .sk-card{background:var(--surface);padding:2.2rem;transition:background .2s;position:relative;overflow:hidden}
@@ -111,68 +107,65 @@ section{position:relative;z-index:1}
 .sk-card:hover::after{transform:scaleX(1)}
 .sk-icon{font-size:1.8rem;margin-bottom:1rem}
 .sk-name{font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;color:var(--white);margin-bottom:.6rem}
-.sk-desc{font-size:.7rem;color:var(--text);line-height:1.9;margin-bottom:1.2rem}
+.sk-desc{font-size:.8rem;color:var(--text);line-height:1.9;margin-bottom:1.2rem}
 .tags{display:flex;flex-wrap:wrap;gap:.4rem}
-.tag{font-size:.6rem;padding:.2rem .6rem;border:1px solid var(--border);color:var(--text);letter-spacing:.04em;transition:all .2s}
+.tag{font-size:.7rem;padding:.2rem .6rem;border:1px solid var(--border);color:var(--text);letter-spacing:.04em;transition:all .2s}
 .tag.hot{border-color:rgba(0,212,255,.45);color:var(--accent);background:rgba(0,212,255,.06)}
 .tag.g{border-color:rgba(74,222,128,.4);color:var(--accent2);background:rgba(74,222,128,.05)}
 
-/* PROJECTS */
 #projects{padding:6rem 4.5rem;border-top:1px solid var(--border)}
 .proj-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-top:2rem}
 .proj{background:var(--surface);padding:2.4rem;position:relative;overflow:hidden;transition:background .22s}
 .proj:hover{background:var(--surface2)}
 .proj::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent2),transparent);transform:scaleX(0);transform-origin:left;transition:transform .35s}
 .proj:hover::before{transform:scaleX(1)}
-.proj-num{font-size:.6rem;color:var(--muted);letter-spacing:.18em;margin-bottom:1rem}
+.proj-num{font-size:.7rem;color:var(--muted);letter-spacing:.18em;margin-bottom:1rem}
 .proj-title{font-family:'Syne',sans-serif;font-weight:700;font-size:1.1rem;color:var(--white);margin-bottom:.7rem}
 .proj-title code{font-family:'JetBrains Mono',monospace;font-size:.88rem;color:var(--accent);background:rgba(0,212,255,.08);padding:.15rem .45rem;border-radius:3px}
-.proj-desc{font-size:.72rem;line-height:1.95;color:var(--text);margin-bottom:1.3rem}
+.proj-desc{font-size:.8rem;line-height:1.95;color:var(--text);margin-bottom:1.3rem}
 .proj-stack{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1.5rem}
-.proj-link{font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .2s}
+.proj-link{font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .2s}
 .proj-link:hover{border-color:var(--accent)}
 
-/* CP */
 #cp{padding:6rem 4.5rem;border-top:1px solid var(--border)}
 .cp-inner{display:grid;grid-template-columns:1fr auto;gap:4rem;align-items:center;background:var(--surface);border:1px solid var(--border);padding:3rem;margin-top:2rem;position:relative;overflow:hidden}
 .cp-inner::before{content:'';position:absolute;top:0;left:0;bottom:0;width:3px;background:linear-gradient(180deg,var(--accent2),transparent)}
 .cp-text h3{font-family:'Syne',sans-serif;font-weight:800;font-size:1.8rem;color:var(--white);margin-bottom:1rem;letter-spacing:-.02em}
 .cp-text h3 em{color:var(--accent2);font-style:normal}
-.cp-text p{font-size:.75rem;line-height:2;color:var(--text);margin-bottom:1rem}
+.cp-text p{font-size:.82rem;line-height:2;color:var(--text);margin-bottom:1rem}
 .cp-text p strong{color:var(--white)}
 .cp-chips{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.8rem}
 .cp-badge{text-align:center;padding:2.2rem 3rem;border:1px solid var(--border);background:var(--bg)}
 .cp-badge-num{font-family:'Syne',sans-serif;font-weight:800;font-size:3.8rem;color:var(--accent2);display:block;line-height:1}
-.cp-badge-sub{font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:.5rem;display:block}
-.cp-badge-label{font-size:.65rem;color:var(--text);margin-top:.3rem;display:block}
+.cp-badge-sub{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:.5rem;display:block}
+.cp-badge-label{font-size:.75rem;color:var(--text);margin-top:.3rem;display:block}
 
-/* CONTACT */
 #contact{padding:6rem 4.5rem 8rem;border-top:1px solid var(--border)}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;margin-top:2rem}
 .contact-text h2{font-family:'Syne',sans-serif;font-weight:800;font-size:2.3rem;color:var(--white);line-height:1.1;letter-spacing:-.03em;margin-bottom:1rem}
 .contact-text h2 em{color:var(--accent);font-style:normal}
-.contact-text p{font-size:.77rem;line-height:2;color:var(--text);margin-bottom:1.8rem}
+.contact-text p{font-size:.82rem;line-height:2;color:var(--text);margin-bottom:1.8rem}
 .contact-links{display:flex;flex-direction:column;gap:.8rem}
 .c-link{display:flex;align-items:center;gap:1rem;text-decoration:none;padding:1.1rem 1.4rem;border:1px solid var(--border);transition:all .22s;position:relative;overflow:hidden;background:var(--surface)}
 .c-link::before{content:'';position:absolute;inset:0;background:rgba(0,212,255,.05);transform:translateX(-101%);transition:transform .25s}
 .c-link:hover::before{transform:translateX(0)}
 .c-link:hover{border-color:rgba(0,212,255,.4)}
 .c-icon{font-size:1.1rem;flex-shrink:0}
-.c-label{font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:.2rem}
-.c-val{color:var(--text-bright);font-size:.73rem}
+.c-label{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:.2rem}
+.c-val{color:var(--text-bright);font-size:.8rem}
 .avail-box{border:1px solid rgba(74,222,128,.25);background:rgba(74,222,128,.04);padding:2rem;margin-bottom:1.5rem}
 .avail-title{font-family:'Syne',sans-serif;font-weight:700;font-size:1.05rem;color:var(--white);display:flex;align-items:center;gap:.7rem;margin-bottom:.8rem}
-.avail-desc{font-size:.72rem;color:var(--text);line-height:1.9}
+.avail-desc{font-size:.8rem;color:var(--text);line-height:1.9}
 .avail-desc strong{color:var(--accent2)}
 .hire-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1.3rem}
 .focus-box{border:1px solid var(--border);padding:1.6rem;background:var(--surface)}
-.focus-box-label{font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:.9rem}
-.focus-item{display:flex;gap:.6rem;align-items:center;font-size:.72rem;color:var(--text);padding:.3rem 0;line-height:1.6}
+.focus-box-label{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:.9rem}
+.focus-item{display:flex;gap:.6rem;align-items:center;font-size:.8rem;color:var(--text);padding:.3rem 0;line-height:1.6}
 
 footer{border-top:1px solid var(--border);padding:1.8rem 4.5rem;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:1}
-.foot-copy{font-size:.62rem;color:var(--muted)}
+.foot-copy{font-size:.72rem;color:var(--muted)}
 .foot-copy span{color:var(--accent)}
-.foot-right{font-size:.62rem;color:var(--muted)}
+.foot-right{font-size:.72rem;color:var(--muted)}
 
 @keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
 @keyframes fadeLeft{from{opacity:0;transform:translateX(32px)}to{opacity:1;transform:translateX(0)}}
@@ -216,7 +209,6 @@ footer{border-top:1px solid var(--border);padding:1.8rem 4.5rem;display:flex;jus
   <div class="nav-status"><div class="dot"></div>Available for opportunities</div>
 </nav>
 
-<!-- HERO -->
 <section id="hero">
   <div class="hero-left">
     <div class="hero-badge"><div class="dot"></div>DevOps-Focused IT Student — Sydney 🇦🇺</div>
@@ -252,7 +244,6 @@ footer{border-top:1px solid var(--border);padding:1.8rem 4.5rem;display:flex;jus
   </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about">
   <div class="sec-label">01 — About</div>
   <div class="about-grid">
@@ -280,7 +271,6 @@ footer{border-top:1px solid var(--border);padding:1.8rem 4.5rem;display:flex;jus
   </div>
 </section>
 
-<!-- SKILLS -->
 <section id="skills">
   <div class="sec-label">02 — Core Stack</div>
   <div class="skills-grid">
@@ -323,7 +313,6 @@ footer{border-top:1px solid var(--border);padding:1.8rem 4.5rem;display:flex;jus
   </div>
 </section>
 
-<!-- PROJECTS -->
 <section id="projects">
   <div class="sec-label">03 — Selected Work</div>
   <div class="proj-grid">
@@ -332,33 +321,32 @@ footer{border-top:1px solid var(--border);padding:1.8rem 4.5rem;display:flex;jus
       <div class="proj-title"><code>90-days-of-devops</code></div>
       <div class="proj-desc">A structured, publicly documented DevOps learning journey. Each day covers a new concept — Linux internals, Git workflows, networking, CI/CD — with real notes and commands. Learning in public, building in public.</div>
       <div class="proj-stack"><span class="tag hot">Linux</span><span class="tag hot">Git</span><span class="tag">Bash</span><span class="tag">Networking</span><span class="tag">CI/CD</span><span class="tag">Docs</span></div>
-      <a href="https://github.com/Fahim017803" class="proj-link" target="_blank">View on GitHub →</a>
+      <a href="https://github.com/Fahim017803" class="proj-link" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
     </div>
     <div class="proj reveal" style="transition-delay:.1s">
       <div class="proj-num">// 02</div>
       <div class="proj-title"><code>shell-scripts</code></div>
       <div class="proj-desc">Practical Bash automation scripts — log analysis, file management, system monitoring utilities. Every script built to solve a real problem, not just to exist.</div>
       <div class="proj-stack"><span class="tag hot">Bash</span><span class="tag hot">Linux</span><span class="tag">Log Analysis</span><span class="tag">Automation</span><span class="tag">CLI</span></div>
-      <a href="https://github.com/Fahim017803" class="proj-link" target="_blank">View on GitHub →</a>
+      <a href="https://github.com/Fahim017803" class="proj-link" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
     </div>
     <div class="proj reveal" style="transition-delay:.1s">
       <div class="proj-num">// 03</div>
       <div class="proj-title"><code>devops-notes</code></div>
       <div class="proj-desc">Personal reference documentation for Linux, Git &amp; networking — structured for quick lookup and deep understanding. Clean, searchable, continuously updated.</div>
       <div class="proj-stack"><span class="tag">Linux</span><span class="tag">Git</span><span class="tag">Networking</span><span class="tag hot">Documentation</span><span class="tag">Markdown</span></div>
-      <a href="https://github.com/Fahim017803" class="proj-link" target="_blank">View on GitHub →</a>
+      <a href="https://github.com/Fahim017803" class="proj-link" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
     </div>
     <div class="proj reveal" style="transition-delay:.2s">
       <div class="proj-num">// 04</div>
       <div class="proj-title"><code>python-scripts</code></div>
       <div class="proj-desc">Python automation and CLI-based utility scripts. From file operations to system automation — practical Python applied in a real DevOps context.</div>
       <div class="proj-stack"><span class="tag hot">Python</span><span class="tag">CLI</span><span class="tag">Automation</span><span class="tag">Utilities</span></div>
-      <a href="https://github.com/Fahim017803" class="proj-link" target="_blank">View on GitHub →</a>
+      <a href="https://github.com/Fahim017803" class="proj-link" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
     </div>
   </div>
 </section>
 
-<!-- CP -->
 <section id="cp">
   <div class="sec-label">04 — Competitive Programming</div>
   <div class="cp-inner reveal">
@@ -380,7 +368,6 @@ footer{border-top:1px solid var(--border);padding:1.8rem 4.5rem;display:flex;jus
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
   <div class="sec-label">05 — Contact</div>
   <div class="contact-grid">
@@ -388,11 +375,11 @@ footer{border-top:1px solid var(--border);padding:1.8rem 4.5rem;display:flex;jus
       <h2>Let's <em>build</em><br>something solid.</h2>
       <p>Open to internships, junior DevOps roles, and any opportunity to work on real infrastructure. If you value fundamentals, documentation, and a learning mindset — let's talk.</p>
       <div class="contact-links">
-        <a href="https://github.com/Fahim017803" class="c-link" target="_blank">
+        <a href="https://github.com/Fahim017803" class="c-link" target="_blank" rel="noopener noreferrer">
           <span class="c-icon">⌥</span>
           <div><span class="c-label">GitHub</span><span class="c-val">github.com/Fahim017803</span></div>
         </a>
-        <a href="https://www.linkedin.com/in/mainul-islam-fahim-a7b7ab223/" class="c-link" target="_blank">
+        <a href="https://www.linkedin.com/in/mainul-islam-fahim/" class="c-link" target="_blank" rel="noopener noreferrer">
           <span class="c-icon">◈</span>
           <div><span class="c-label">LinkedIn</span><span class="c-val">linkedin.com/in/mainul-islam-fahim</span></div>
         </a>
