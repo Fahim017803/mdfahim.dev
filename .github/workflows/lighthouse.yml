@@ -1,24 +1,17 @@
 name: Lighthouse CI
-
 on:
   workflow_run:
     workflows: ["Deploy Portfolio"]
     types:
       - completed
-
 jobs:
   lighthouse:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - name: Run Lighthouse
         uses: treosh/lighthouse-ci-action@v11
-        # Google Lighthouse দিয়ে site check করবে
         with:
           urls: |
             http://18.183.212.236
-            # এই URL check করবে
           uploadArtifacts: true
-          # result file হিসেবে save করবে — Actions এ download করা যাবে
-          # Performance, SEO, Accessibility, Best Practices score দেবে
