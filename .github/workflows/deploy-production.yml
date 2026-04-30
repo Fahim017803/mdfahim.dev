@@ -22,3 +22,5 @@ jobs:
           docker compose down
           docker compose pull
           docker compose up -d
+          sleep 2
+          docker compose restart
