@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 jobs:
   deploy:
-    runs-on: [self-hosted, Linux, X64, ip-172-31-33-243]
+    runs-on: [self-hosted, Linux, X64, My-porfolio-production]
     environment: production
     steps:
       - uses: actions/checkout@v4
@@ -17,5 +17,5 @@ jobs:
           docker compose down
           docker compose pull
           docker compose up -d
-          sleep 5 
+          sleep 5
           docker compose restart

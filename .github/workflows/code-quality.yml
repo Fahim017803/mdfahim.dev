@@ -1,20 +1,13 @@
 name: Code Quality
-
 on:
   push:
-    branches: [main]
-
+    branches: [main, staging]
 jobs:
   html-lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - name: Install HTMLHint
         run: npm install -g htmlhint
-        # npm দিয়ে HTMLHint tool install করবে
-
       - name: Run HTMLHint
         run: htmlhint index.html
-        # index.html file এ HTML error আছে কিনা check করবে
-        # missing tags, wrong attributes ইত্যাদি ধরবে
