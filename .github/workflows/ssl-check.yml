@@ -1,16 +1,12 @@
 name: SSL Check
-
 on:
   schedule:
     - cron: '0 9 * * 1'
-    # প্রতি সোমবার সকাল ৯টায় run হবে (UTC)
   workflow_dispatch:
-  # manually ও run করা যাবে
-
 jobs:
   ssl:
     runs-on: ubuntu-latest
     steps:
-     - name: Check SSL certificate
-       run: |
-          curl -vI http://ec2.mdfahim.dev 2>&1 | grep -E "Server|Content-Type|HTTP"
+      - name: Check SSL certificate
+        run: |
+          curl -vI https://ec2.mdfahim.dev 2>&1 | grep -E "expire|issuer|subject"

@@ -1,7 +1,7 @@
 name: Lighthouse CI
 on:
   workflow_run:
-    workflows: ["Deploy Portfolio"]
+    workflows: ["Deploy Production"]
     types:
       - completed
 jobs:
