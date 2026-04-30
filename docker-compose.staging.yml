@@ -1,0 +1,6 @@
+services:
+  web:
+    image: fahim017803/mdfahim.dev:latest
+    ports:
+      - "80:80"
+    restart: always
