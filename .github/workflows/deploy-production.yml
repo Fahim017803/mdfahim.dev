@@ -12,15 +12,10 @@ jobs:
         with:
           username: ${{ vars.DOCKERHUB_USER }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-      - name: fix letsencrypt permissions
-        run: |
-          sudo chmod 755 /etc/letsencrypt/live/
-          sudo chmod 755 /etc/letsencrypt/archive/
-          sudo chmod 644 /etc/letsencrypt/archive/ec2.mdfahim.dev/*.pem
+    
       - name: deploy with docker compose
         run: |
           docker compose down
           docker compose pull
           docker compose up -d
-          sleep 2
-          docker compose restart
+          
