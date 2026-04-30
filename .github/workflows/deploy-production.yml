@@ -16,7 +16,6 @@ jobs:
         run: |
           docker compose down
           docker compose pull
-          docker compose up -d
-          sleep 10
+          docker compose up -d || true
           docker compose down
           docker compose up -d
