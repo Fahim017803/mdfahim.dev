@@ -6,7 +6,7 @@ on:
       - completed
 jobs:
   deploy:
-    runs-on: [self-hosted, Linux, X64, staging]
+    runs-on: [self-hosted, Linux, X64]
     environment: staging
     if: ${{ github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'staging' }}
     steps:
