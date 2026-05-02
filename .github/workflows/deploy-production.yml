@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 jobs:
   deploy:
-    runs-on: [self-hosted, Linux, X64, My-porfolio-production]
+    runs-on: [self-hosted, Linux, X64, My-portfolio-production]
     environment: production
     steps:
       - uses: actions/checkout@v4
