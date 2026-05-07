@@ -1,0 +1,17 @@
+name: DevSecOps Pipeline
+on:
+  push:
+    branches: [main, staging]
+
+jobs:
+  code-quality:
+    uses: ./.github/workflows/code-quality.yml
+
+  secrets-scan:
+    uses: ./.github/workflows/secret-scan.yml
+
+  dependency-scan:
+    uses: ./.github/workflows/dependencies-scan.yml
+
+  docker-scan:
+    uses: ./.github/workflows/docker-lint.yml
