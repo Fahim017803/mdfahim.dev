@@ -11,5 +11,12 @@ jobs:
         uses: aquasecurity/trivy-action@master
         with:
           image-ref: fahim017803/mdfahim.dev:latest
-          format: table
+          format: json
+          output: trivy-report.json
           exit-code: 0
+      - name: Upload Trivy Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: trivy-report-${{ github.run_number }}
+          path: trivy-report.json
+          retention-days: 90

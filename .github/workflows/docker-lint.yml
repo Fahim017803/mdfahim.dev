@@ -11,3 +11,12 @@ jobs:
         uses: hadolint/hadolint-action@v3.1.0
         with:
           dockerfile: dockerfile
+          format: json
+          output-file: hadolint-report.json
+          no-fail: true
+      - name: Upload Hadolint Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: hadolint-report-${{ github.run_number }}
+          path: hadolint-report.json
+          retention-days: 90
