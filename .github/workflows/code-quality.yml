@@ -10,4 +10,10 @@ jobs:
       - name: Install HTMLHint
         run: npm install -g htmlhint
       - name: Run HTMLHint
-        run: htmlhint index.html
+        run: htmlhint index.html --format json > htmlhint-report.json || true
+      - name: Upload HTMLHint Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: htmlhint-report-${{ github.run_number }}
+          path: htmlhint-report.json
+          retention-days: 90
