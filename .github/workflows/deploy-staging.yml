@@ -4,6 +4,8 @@ on:
     workflows: ["DevSecOps Pipeline"]
     types:
       - completed
+  workflow_call: 
+
 jobs:
   deploy:
     runs-on: [self-hosted, Linux, X64]
