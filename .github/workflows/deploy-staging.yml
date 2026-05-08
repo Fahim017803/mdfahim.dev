@@ -10,10 +10,7 @@ jobs:
   deploy:
     runs-on: [self-hosted, Linux, X64]
     environment: staging
-    if: |
-     (github.event_name == 'workflow_call') ||
-     (github.event.workflow_run.conclusion == 'success' && 
-      github.event.workflow_run.head_branch == 'staging')
+    if: ${{ (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'staging') || github.event_name == 'workflow_call' }}x
     steps:
       - uses: actions/checkout@v4
       - name: login to docker
