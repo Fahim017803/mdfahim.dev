@@ -1,18 +1,32 @@
 name: DevSecOps Pipeline
+
 on:
   push:
     branches: [main, staging]
 
 jobs:
+
+  # ── Security & Quality Scans (parallel) ────────────────────────────────────
+
+  secret-scan:
+    uses: ./.github/workflows/secret-scan.yml
+    secrets: inherit
+
   code-quality:
     uses: ./.github/workflows/code-quality.yml
+    secrets: inherit
 
-  secrets-scan:
-    uses: ./.github/workflows/secret-scan.yml
+  docker-lint:
+    uses: ./.github/workflows/docker-lint.yml
+    secrets: inherit
 
   dependency-scan:
     uses: ./.github/workflows/dependencies-scan.yml
+    secrets: inherit
 
-  docker-scan:
-    uses: ./.github/workflows/docker-lint.yml
-    
+  # ── Docker Build & Push (only after ALL scans pass) ────────────────────────
+
+  build:
+    needs: [secret-scan, code-quality, docker-lint, dependency-scan]
+    uses: ./.github/workflows/docker-push.yml
+    secrets: inherit
