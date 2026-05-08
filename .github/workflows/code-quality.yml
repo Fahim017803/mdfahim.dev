@@ -1,7 +1,7 @@
 name: Code Quality
 on:
-  push:
-    branches: [main, staging]
+  workflow_call:
+
 jobs:
   html-lint:
     runs-on: ubuntu-latest

@@ -1,7 +1,6 @@
 name: docker build and push
 on:
-  push:
-    branches: [main, staging]
+  workflow_call:
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
