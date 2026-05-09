@@ -1,14 +1,16 @@
 name: Deploy Staging
 on:
   workflow_run:
-    workflows: ["docker build and push"]
+    workflows: ["DevSecOps Pipeline"]
     types:
       - completed
+  workflow_call: 
+
 jobs:
   deploy:
     runs-on: [self-hosted, Linux, X64]
     environment: staging
-    if: ${{ github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'staging' }}
+    if: ${{ (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'staging') || github.event_name == 'workflow_call' }}x
     steps:
       - uses: actions/checkout@v4
       - name: login to docker

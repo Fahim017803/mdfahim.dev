@@ -35,4 +35,10 @@ jobs:
     needs: [build]
     uses: ./.github/workflows/image-scan.yml
     secrets: inherit
+
+  # ── Deploy to Staging (only after build & scan pass) ───────────────────────
+  deploy-staging:
+    needs: [build, trivy]
+    uses: ./.github/workflows/deploy-staging.yml
+    secrets: inherit
     
